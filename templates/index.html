@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Organizer</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <h1>File Organizer</h1>
+      <p class="subtitle">Upload files or pick a server folder, then organize with one click</p>
+    </header>
+
+    <section class="uploader card">
+      <div id="dropzone" class="dropzone">
+        <input id="fileinput" type="file" multiple />
+        <div class="drop-inner">
+          <p>Drag & drop files here or click to choose</p>
+          <small>Max total size per request: 200 MB</small>
+        </div>
+      </div>
+      <div class="controls">
+        <label for="target_dir">Server target folder (optional)</label>
+        <input id="target_dir" placeholder="e.g., project_uploads" />
+        <button id="uploadBtn" class="btn primary">Upload</button>
+      </div>
+      <div id="preview" class="preview"></div>
+    </section>
+
+    <section class="actions card">
+      <h3>Server directories</h3>
+      <div id="dirList" class="dir-list"></div>
+      <div class="action-row">
+        <button id="refreshDirs" class="btn">Refresh</button>
+        <button id="organizeBtn" class="btn primary">Organize Selected</button>
+        <label><input type="checkbox" id="dryRun" /> Dry run</label>
+      </div>
+      <pre id="out" class="output" hidden></pre>
+    </section>
+
+    <footer class="footer">Built with Python + Flask • Safe sandbox under server folder</footer>
+  </main>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.env
+instance/
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# node/npm (if any)
+node_modules/
+
+# uploads and user files
+user_files/
+uploads/
+
+# distribution
+dist/
+build/
+*.egg-info/
